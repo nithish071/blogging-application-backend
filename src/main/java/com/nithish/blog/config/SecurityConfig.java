@@ -50,7 +50,7 @@ public class SecurityConfig {
     SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 	        http.csrf(AbstractHttpConfigurer::disable)
 					.authorizeHttpRequests((authz) -> authz
-							.requestMatchers(PUBLIC_URLS).permitAll().requestMatchers(HttpMethod.GET).permitAll().anyRequest().authenticated()
+							.requestMatchers(PUBLIC_URLS).permitAll().requestMatchers(HttpMethod.POST,"/api/v1/auth/**").permitAll().requestMatchers(HttpMethod.GET).permitAll().anyRequest().authenticated()
 					)
 					.httpBasic(Customizer.withDefaults()).exceptionHandling(
 							exceptionConfigurer -> exceptionConfigurer

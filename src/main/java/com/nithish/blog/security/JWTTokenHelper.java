@@ -19,7 +19,7 @@ import java.util.function.Function;
 public class JWTTokenHelper {
     public static final long JWR_TOKEN_VALIDITY = 5 * 60 * 60;
 
-    private String secret = "nkM59FPVTf1lEmaSfWooAHLHQUq3l2o+MBrfUQDeA800eGgy1tYlt17bD2QpcFGYQGVgfZFQPBcNSS0BFuKjUw==";
+    private String secret = "jwtToken";
 
     // retrieve username from jwt token
     public String getUsernameFromToken(String token){

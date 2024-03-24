@@ -33,7 +33,7 @@ public class UserServiceImpl implements UserService {
 	public UserDto registerNewUser(UserDto userDto) {
 
 		User user = this.modelMapper.map(userDto,User.class);
-
+		System.out.println(user.getPassword());
 		// encoded the password
 		user.setPassword(this.passwordEncoder.encode(user.getPassword()));
 		// roles

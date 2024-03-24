@@ -33,7 +33,7 @@ public class BlogAppsApiApplication implements CommandLineRunner{
 
 	@Override
 	public void run(String... args) throws Exception {
-		System.out.println(this.passwordEncoder.encode("xyz"));
+//		System.out.println(this.passwordEncoder.encode("xyz"));
 
 		try {
 			Role role = new Role();
@@ -47,7 +47,7 @@ public class BlogAppsApiApplication implements CommandLineRunner{
 			List<Role> roles = List.of(role, role1);
 			List<Role> result = this.roleRepo.saveAll(roles);
 
-			result.forEach(r-> System.out.println(r.getName()));
+//			result.forEach(r-> System.out.println(r.getName()));
 
 		} catch (Exception e){
 			e.printStackTrace();
