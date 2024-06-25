@@ -28,12 +28,12 @@ public class userController {
 	@Autowired
 	private UserService userService;
 	
-	//POST - create user
-	@PostMapping("/")
-	public ResponseEntity<UserDto> createUser(@Valid @RequestBody UserDto userDto) {
-		UserDto creteUserDto = this.userService.createUser(userDto);
-		return new ResponseEntity<>(creteUserDto,HttpStatus.CREATED);
-	}
+	// //POST - create user
+	// @PostMapping("/")
+	// public ResponseEntity<UserDto> createUser(@Valid @RequestBody UserDto userDto) {
+	// 	UserDto creteUserDto = this.userService.createUser(userDto);
+	// 	return new ResponseEntity<>(creteUserDto,HttpStatus.CREATED);
+	// }
 	//PUT- update user
 	@PutMapping("/{userId}")
 	public ResponseEntity<UserDto> updateUser(@Valid @RequestBody UserDto userDto,@PathVariable("userId") Integer uid){
